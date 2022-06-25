@@ -1,0 +1,158 @@
+################## Hero Area #######################
+hero_area:
+  title : "Design Studio"
+  image : "/assets/images/banner/banner-3.png"
+  content : "Dolor sit amet consectetur elit sed do eiusmod tempor incididunt labore et dolore magna.<br>aliqua enim ad minim veniam quis."
+  button:
+    enable : true
+    label : "Contact Us"
+    link : "/contact"
+
+###################### Services #####################
+services:
+  enable : true
+  bg_image : "/assets/images/bg/feature-bg.png"
+  item:
+  - name : "Brand Design"
+    icon : "ti-ruler-pencil"
+    content : "Lorem ipsum dolor sit amet consectetur elit sed do eiusmod tempor incididunt labore et dolore magna."
+    
+  - name : "Seo & Marketing"
+    icon : "ti-announcement"
+    content : "Lorem ipsum dolor sit amet consectetur elit sed do eiusmod tempor incididunt labore et dolore magna."
+    
+  - name : "Creative Design"
+    icon : "ti-palette"
+    content : "Lorem ipsum dolor sit amet consectetur elit sed do eiusmod tempor incididunt labore et dolore magna."
+
+################## About ###########################
+about:
+  enable : true
+  subtitle : "About Us"
+  title : "We are Design & <br>Development Team."
+  video_thumb : "/assets/images/about/about.jpg"
+  video_url : "https://www.youtube.com/watch?v=jrkvirglgaQ"
+  content : "Dolor sit amet consectetur elit sed do eiusmod tempor incididunt labore et dolore magna aliqua enim minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip commodo consequat.duis aute irure.
+  
+
+  Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem.
+  "
+  button:
+    enable : true
+    label : "Purchase now"
+    link : "/pricing"
+
+
+###################### Funfacts #########################
+funfacts:
+  enable : true
+  bg_image : "/assets/images/bg/cta-bg.png"
+  item:
+  - name : "work completed"
+    icon : "ti-briefcase"
+    value : "370"
+    
+  - name : "new projects"
+    icon : "ti-paint-bucket"
+    value : "450"
+    
+  - name : "Happy customers"
+    icon : "ti-heart"
+    value : "5000"
+    
+  - name : "awards win"
+    icon : "ti-cup"
+    value : "37"
+
+###################### Skill #############################
+skill:
+  enable : true
+  subtitle : "our skill"
+  title : "We are Design & Development Team."
+  image : "/assets/images/about/skill.jpg"
+  item:
+  - name : "Branding"
+    percentage : "85%"
+    
+  - name : "Consulting"
+    percentage : "90%"
+    
+  - name : "Business"
+    percentage : "75%"
+    
+  - name : "Promotion"
+    percentage : "95%"
+
+
+######################### Testimonail ####################
+testimonial:
+  enable : true
+  subtitle : "testimonials"
+  title : "Our Clients Say"
+  item:
+  - name : "Liam Hughes"
+    designation : "Manager"
+    image : "/assets/images/team/test-1.jpg"
+    content : "Lorem ipsum dolor amet constur adipisicing elit sed eiusmtempor incid dolore magna aliqu. enim minim	veniam."
+    
+  - name : "Liam Hughes"
+    designation : "Manager"
+    image : "/assets/images/team/test-2.jpg"
+    content : "Lorem ipsum dolor amet constur adipisicing elit sed eiusmtempor incid dolore magna aliqu. enim minim	veniam."
+    
+  - name : "Liam Hughes"
+    designation : "Manager"
+    image : "/assets/images/team/test-3.jpg"
+    content : "Lorem ipsum dolor amet constur adipisicing elit sed eiusmtempor incid dolore magna aliqu. enim minim	veniam."
+    
+  - name : "Liam Hughes"
+    designation : "Manager"
+    image : "/assets/images/team/test-1.jpg"
+    content : "Lorem ipsum dolor amet constur adipisicing elit sed eiusmtempor incid dolore magna aliqu. enim minim	veniam."
+    
+  - name : "Liam Hughes"
+    designation : "Manager"
+    image : "/assets/images/team/test-2.jpg"
+    content : "Lorem ipsum dolor amet constur adipisicing elit sed eiusmtempor incid dolore magna aliqu. enim minim	veniam."
+    
+  - name : "Liam Hughes"
+    designation : "Manager"
+    image : "/assets/images/team/test-3.jpg"
+    content : "Lorem ipsum dolor amet constur adipisicing elit sed eiusmtempor incid dolore magna aliqu. enim minim	veniam."
+
+
+###################### Clients ######################
+clients:
+  enable : true
+  logos:
+    - "/assets/images/clients/client-1.png"
+    - "/assets/images/clients/client-2.png"
+    - "/assets/images/clients/client-3.png"
+    - "/assets/images/clients/client-4.png"
+    - "/assets/images/clients/client-5.png"
+    - "/assets/images/clients/client-1.png"
+    - "/assets/images/clients/client-2.png"
+    - "/assets/images/clients/client-3.png"
+    - "/assets/images/clients/client-4.png"
+    - "/assets/images/clients/client-5.png"
+    
+
+###################### Team ######################
+team:
+  enable : true
+  item:
+  - name : "Liam Hughes"
+    designation : "Manager"
+    image : "/assets/images/team/team-1.jpg"
+    
+  - name : "Liam Hughes"
+    designation : "Manager"
+    image : "/assets/images/team/team-2.jpg"
+    
+  - name : "Liam Hughes"
+    designation : "Manager"
+    image : "/assets/images/team/team-3.jpg"
+    
+  - name : "Liam Hughes"
+    designation : "Manager"
+    image : "/assets/images/team/team-4.jpg"

@@ -1,0 +1,39 @@
+---
+---
+
+/*!------------------------------------------------------------------
+[MAIN STYLESHEET]
+
+PROJECT:	Dizer-Portfolio template
+VERSION:	1.0
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+[TABLE OF CONTENTS]
+-------------------------------------------------------------------*/
+
+@import 'variables.scss';
+
+@import 'typography.scss';
+
+@import 'mixins.scss';
+
+@import 'buttons.scss';
+
+@import 'common.scss';
+@import 'templates/menu.scss';
+@import 'templates/slider.scss';
+@import 'templates/service.scss';
+@import 'templates/about.scss';
+@import 'templates/portfolio.scss';
+@import 'templates/counter.scss';
+@import 'templates/skill.scss';
+@import 'templates/testimonial.scss';
+@import 'templates/team.scss';
+@import 'templates/latest-blog.scss';
+@import 'templates/contact.scss';
+@import 'templates/pricing.scss';
+@import 'templates/blog.scss';
+@import 'templates/blog-single.scss';
+
+@import 'templates/footer.scss';

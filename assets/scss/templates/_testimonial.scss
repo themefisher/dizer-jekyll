@@ -1,0 +1,141 @@
+.bg-testimonial{
+	background: url("../images/bg/bg-3.jpg") no-repeat;
+	background-size: cover;
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 100%;
+	top: 0px;
+}
+.h60{
+	height: 60%;
+}
+
+.testimonial {
+	.card{
+		border: 0px;
+		padding: 2.5rem 2rem 2.5rem 2rem;
+		border-bottom: 4px solid $primary-color;
+		p{
+			font-size: 17px;
+			line-height: 30px;
+			color: #848484;
+		}
+
+		.img-block{
+			img{
+				border-radius: 100%;
+				width: 100px;
+				height: 100px;
+			}
+
+			i{
+				width: 40px;
+				height: 40px;
+				font-size: 13px;
+				border-radius: 100%;
+				border: 4px solid $white;
+				position: absolute;
+				content:"";
+				bottom: 0px;
+				background: $primary-color;
+				color: $white;
+				display: inline-block;
+				text-align: center;
+				line-height: 34px;
+				right: 30%;
+			}
+		}
+	}
+}
+
+.pattern-bg{
+	position: relative;
+	&:before{
+		position: absolute;
+		content:"";
+		background: url("../images/about/pattern-short.png") no-repeat;
+		width: 100%;
+		height: 100%;
+		left: 81%;
+		bottom: -200px;
+		margin-bottom: -120px;
+		z-index: -1;
+	}
+}
+
+
+
+// Testimonial-=2
+
+
+.testimonial-2{
+	background: url("../images/bg/bg-8.jpg") no-repeat;
+	background-size: cover;
+
+	p{
+		font-size: 20px;
+		line-height: 32px;
+		font-style: italic;
+		color: rgba(255,255,255,.9);
+
+	}
+
+	.testimonial-content{
+		position: relative;
+		padding-left: 50px;
+	}
+
+	.test-wrap i{
+		position: absolute;
+		left: 0px;
+		content:"";
+		top:0px;
+		font-size: 30px;
+	}
+}
+
+
+.test-author {
+	img{
+		width: 80px;
+		height: 80px;
+		border-radius: 100%;
+	}
+}
+
+.prev-arrow {
+    right: 0px;
+}
+.next-arrow{
+    right: 45px;
+}
+
+.slick-arrow {
+    position: absolute;
+    bottom: 0px;
+    z-index: 9;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    border: 0;
+    color: $white;
+    background: transparent;
+    line-height: 70px;
+    font-size: 35px;
+    outline: 0;
+    -webkit-transition: all .35s ease;
+       -moz-transition: all .35s ease;
+        -ms-transition: all .35s ease;
+         -o-transition: all .35s ease;
+            transition: all .35s ease;
+            cursor: pointer;
+
+    &:focus{
+    	 outline: 0;
+    }
+
+    &:hover{
+    	color: $primary-color;
+    }
+}

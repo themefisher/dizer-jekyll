@@ -1,0 +1,30 @@
+.bg-counter{
+	background: url("../images/bg/bg-1.jpg")no-repeat;
+	background-size: cover;
+	background-position: 50% 67%;
+}
+.bg-counter-2{
+	background: url("../images/bg/bg-9.jpg")no-repeat;
+	background-size: cover;
+	background-position: 50% 40%;
+}
+
+.counter{
+	font-size: 46px;
+	font-weight: 700;
+}
+
+.counter-content {
+	i{
+		color: $primary-color;
+		font-size: 50px;
+		line-height: 60px;
+	}
+	h2{
+		color: $white;
+	}
+	p{
+		color: #d4dae3;
+		font-weight: 600;
+	}
+}

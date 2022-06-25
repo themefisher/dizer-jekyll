@@ -1,0 +1,45 @@
+.home-contact{
+	background: url("../images/bg/bg-7.jpg")center center no-repeat;
+	background-size: cover;
+
+	.form-control {
+	    background-color: transparent;
+	    border-radius: 0px;
+	    border: 0px;
+	    border-bottom: 1px solid #e6c5c5;
+	    padding-left: 0px;
+	    box-shadow: 0px;
+	    color: $black!important;
+	    font-size: 14px;
+	}
+
+	.form-control:focus{
+		box-shadow: none;
+	}
+}
+
+
+// Contact page
+// 
+
+
+.contact-info{
+	position: relative;
+
+	i{
+		position: absolute;
+		content:"";
+		left: 0px;
+		top: 3px;
+		font-size:35px;
+	}
+
+	.info{
+		margin-left: 50px;
+	}
+}
+
+.google-map #map {
+    width: 100%;
+    height: 450px;
+}

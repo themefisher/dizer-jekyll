@@ -1,0 +1,23 @@
+<!-- Counter Start -->
+{% assign count = site.data.homepage_2.funfacts %}
+{% if count.enable %}
+<section class="section-sm counter-section bg-secondary position-relative">
+	<img src="{{count.bg_image | relative_url }}" alt="" class="overlay-shape">
+	<div class="container">
+		<div class="row">
+			{% for item in count.item %}
+			<div class="col-lg-3 col-md-6">
+				<div class="counter-content d-flex mb-5 mb-lg-0">
+					<i class="{{item.icon}} mr-4"></i>
+					<div>
+						<h2 class="mb-0"><span class="counter">{{item.value}}</span></h2>
+						<p class="text-capitalize mb-0">{{item.name}}</p>
+					</div>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</section>
+<!-- Counter End -->
+{% endif %}

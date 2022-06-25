@@ -1,0 +1,49 @@
+---
+layout: default
+header_image: "/assets/images/bg/blog-bg.jpg"
+title: "Our Blog"
+description: "Dolor sit amet consectetur elit sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis."
+pagination:
+  enabled: true
+---
+
+{% include page_header.html %}
+
+<section class="section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="row justify-content-center">
+                {% for post in paginator.posts %}
+				<div class="col-lg-12 col-md-12">
+					<div class="blog-item mb-5">
+						{% if post.post_image %}
+						<div class="blog-img position-relative">
+							<a href="{{post.url}}"><img src="{{post.post_image}}" alt="{{post.title}}" class="img-fluid w-100"/></a>
+						</div>
+						{% endif %}
+						<h4 class="mt-4 mb-2"><a href="{{post.url}}">{{post.title}}</a></h4>
+						<div class="post-meta text-uppercase mb-3">
+							{% if post.author %}
+							 <a href="#" class="text-color">by {{post.author}}</a>
+							{% endif %}
+							{% if post.date %}
+						      <span class="text-color">/ {{post.date | date_to_long_string}}</span>
+							{% endif %}
+						</div>
+						<p>{{post.excerpt | strip_html | truncatewords:"25"}}</p>
+						<a href="{{post.url}}" class="btn btn-solid-border">Read More </a>
+					</div>
+				</div>
+                {% endfor %}
+             </div>
+            </div>
+            <div class="col-lg-4">
+              {% include sidebar.html %}
+            </div>
+        </div>
+        {% include pagination.html %}
+    </div>
+</section>
+
+{% include call_to_action.html %}

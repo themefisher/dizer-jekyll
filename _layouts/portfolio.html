@@ -1,0 +1,38 @@
+---
+layout: default_2
+---
+
+{% include header_2.html %}
+<section class="portfolio-single">
+	<div class="container">
+		<div class="row justify-content-center">
+          {{page.content}}
+		</div>
+	</div>
+</section>
+
+
+<section class="section related-project">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<h3 class="mb-5">Related Projects</h3>
+			</div>
+		</div>
+		<div class="row">
+            {% for portfolio in site.portfolios limit:"3" %}
+			<div class="col-lg-4">
+				<div class="portfolio-block text-center border-0 ">
+				    <img src="{{portfolio.thumbnail}}" class="img-fluid" alt="{{portfolio.title}}"/>
+				    <a class="card-img-overlay" href="{{portfolio.url}}">
+				      <h5 class="card-title text-white mb-0">{{portfolio.title}}</h5>
+				      <p class="card-text text-white text-uppercase text-sm">{{portfolio.category}}</p>
+				    </a>
+				</div>
+			</div>
+            {% endfor %}
+		</div>
+	</div>
+</section>
+
+{% include call_to_action.html %}

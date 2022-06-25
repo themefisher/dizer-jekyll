@@ -1,0 +1,41 @@
+<!-- Blog Start -->
+<section class="section latest-blog position-relative overflow-hidden">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<span class="h5 text-color text-uppercase">
+					latest article
+				</span>
+				<h3 class="mb-5 mt-2">Stay Update with dizer.</h3>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			{% for post in site.posts limit: "3" %}
+			<div class="col-lg-4 col-md-6  mb-4 mb-lg-0">
+				{% if post.post_image %}
+				<div class="blog-img position-relative">
+					<a href="{{post.url}}"><img src="{{post.post_image}}" alt="{{post.title}}" class="img-fluid w-100"></a>
+					{% if post.tags %}
+					<a class="blog-category"
+						href="/tag/{{post.tags[0] | limit:'1' | downcase | replace: ' ','_'}}">{{post.tags[0] | limit:"1" | replace:',','' }}</a>
+					{% endif %}
+				</div>
+				{% endif %}
+				<a href="{{post.url}}">
+					<h4 class="mt-4 mb-2">{{post.title}}</h4>
+				</a>
+				<div class="post-meta text-uppercase mb-3">
+					{% if post.author %}
+					<span class="text-color">by {{post.author}}</span>
+					{% endif %}
+					{% if post.date %}
+					<span class="text-color">/ {{post.date | date_to_long_string}}</span>
+					{% endif %}
+				</div>
+				<p>{{post.excerpt | strip_html | truncatewords: "20"}}</p>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</section>
+<!-- Blog End -->

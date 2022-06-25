@@ -1,0 +1,74 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+
+<body data-spy="scroll" data-target="#ftco-navbar-spy" data-offset="0" class="">
+
+  <div class="d-flex position-relative">
+    <!-- sidebar -->
+    <div class="side-nav shadow">
+      <a class="navbar-brand text-black p-4" href="{{site.baseurl}}">d<span class="dot"></span></a>
+      <a href="#" class="toggler"><i class="ti-align-right"></i></a>
+      <div class="fixed-bottom">
+        <div class="meta-share">
+          <div class="social-links">
+            {% for social in site.social %}
+            <a target="_blank" href="{{social.link}}"><i class="{{social.icon}}"></i></a>
+            {% endfor %}
+          </div>
+          <div class="share-btn"><i class="ti-share"></i></div>
+        </div>
+      </div>
+    </div>
+    <!-- /sidebar -->
+
+    <!-- navigation -->
+    <nav class="full-nav navbar">
+      {% include navigation_2.html %}
+    </nav>
+    <!-- /navigation -->
+
+    <div class="w-100">
+      <!-- POrtfolio  Start -->
+      <section class="section portfolio-2">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8">
+              <span class="h5 text-color text-uppercase">
+                our works
+              </span>
+              <h3 class="mb-5 mt-2">A collection of some recently completed projects, covering a wide <span
+                  class="text-color">range of design disciplines</span></h3>
+            </div>
+          </div>
+
+          <div class="row mb-5">
+            <div class="col-10">
+              <div class="btn-group btn-group-toggle " data-toggle="buttons">
+                <label class="btn border-0 active">
+                  <input type="radio" name="shuffle-filter" value="all" checked="checked" />All Projects
+                </label>
+                {% assign categories = site.portfolios| map: 'categories' | join: ',' | split: ',' | uniq %}
+                {% for category in categories %}
+                <label class="btn border-0">
+                  <input type="radio" name="shuffle-filter" value="{{ category | downcase | slugify }}" />{{ category }}
+                </label>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+
+          <div class="row shuffle-wrapper portfolio-gallery">
+            {% include portfolio_loop.html %}
+          </div>
+        </div>
+      </section>
+      {% include footer_2.html %}
+    </div>
+  </div>
+
+</body>
+
+</html>

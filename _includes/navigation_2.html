@@ -1,0 +1,28 @@
+<ul class="navbar-nav">
+	{% for link in site.data.navigation.main %}
+	{% assign active = nil %}
+
+	{% for sublink in link.submenu %}
+	{% if page.url contains sublink.url %}
+	{% assign active = 'active' %}
+	{% endif %}
+	{% endfor %}
+
+	{% if page.url contains link.url %}
+	{% assign active = 'active' %}
+	{% endif %}
+
+	<li class="nav-item {% if link.submenu %} dropdown {% endif %}">
+		<a class="nav-link" href="{{link.url | relative_url }}" {% if link.submenu %}
+			data-toggle="dropdown" {% endif %}>{{link.name}}{% if link.submenu %}<i
+				class="ti-angle-down ml-2"></i>{% endif %}</a>
+		{% if link.submenu %}
+		<ul class="sub-menu dropdown-menu">
+			{% for sublink in link.submenu %}
+			<li><a class="dropdown-item" href="{{sublink.url | relative_url }}">{{sublink.name}}</a></li>
+			{% endfor %}
+		</ul>
+		{% endif %}
+	</li>
+	{% endfor %}
+</ul>

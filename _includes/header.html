@@ -1,0 +1,14 @@
+<nav class="navbar navbar-expand-lg fixed-top main-nav" id="main-nav">
+	<div class="container">
+		<a class="navbar-brand" href="{{site.baseurl}}">
+			<img src="{{site.logo | relative_url}}" alt="{{site.title}}" class="img-fluid">
+		</a>
+		<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navigation"
+			aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="fa fa-bars"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navigation">
+			{% include navigation.html %}
+		</div>
+	</div>
+</nav>

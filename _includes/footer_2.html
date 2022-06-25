@@ -1,0 +1,31 @@
+<footer class="section-sm footer-2">
+	<div class="container">
+		<div class="row align-items-center justify-content-md-between">
+			<div class="col-12 col-lg-4">
+				<div class="text-center text-lg-left"> <span>{{site.copyright | markdownify}}</span></div>
+			</div>
+			<div class="col-lg-4 text-center col-12">
+				<a href="{{site.baseurl}}">
+					<img src="{{site.logo | relative_url}}" alt="{{site.title}}" class="img-fluid">
+				</a>
+			</div>
+			<div class="col-lg-4 col-12">
+				<div class="text-center text-lg-right">
+					{% for menu in site.data.navigation.bottom %}
+					<a href="{{menu.link | relative_url }}">{{menu.name}} {% unless forloop.last %} <span class="mx-2">|</span>{% endunless %}</a>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<script src="{{site.google_map_api}}"></script>
+
+<!-- JS Plugins -->
+{% for js in site.data.plugins.js %}
+<script src="{{ js | relative_url }}"></script>
+{% endfor %}
+
+<!-- Main Script -->
+<script src="{{ '/assets/js/script.js' | relative_url }}"></script>

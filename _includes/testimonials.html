@@ -1,0 +1,34 @@
+<!-- Testimonial Start -->
+{% assign testimonial = site.data.homepage_2.testimonial %}
+{% if testimonial.enable %}
+<section class="section testimonial position-relative">
+	<div class="h60 bg-testimonial"></div>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<span class="h5 text-color text-uppercase">
+					{{ testimonial.subtitle }}
+				</span>
+				<h3 class="mb-5 mt-2">{{ testimonial.title }}</h3>
+			</div>
+		</div>
+
+		<div class="row testimonial-slider">
+			{% for item in testimonial.item %}
+			<div class="col-lg-4">
+				<div class="card text-center rounded-0 shadow mb-4">
+					<div class="img-block position-relative mb-4">
+						<img src="{{ item.image | relative_url }}" alt="" class="img-fluid">
+						<i class="ti-quote-right"></i>
+					</div>
+					{{item.content| markdownify}}
+					<h5 class="mb-0 mt-2">{{ item.name }}</h5>
+					<span class="text-color">{{ item.designation }}</span>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</section>
+<!-- Testimonial End -->
+{% endif %}

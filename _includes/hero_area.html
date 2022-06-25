@@ -1,0 +1,21 @@
+<!-- Slider Start -->
+{% assign banner = site.data.homepage_2.hero_area %}
+<section class="banner position-relative">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-9">
+				<div class="banner-content">
+					<h2 class="text-white">{{banner.title}}</h2>
+					<p class="text-white mt-4 mb-5">{{banner.content}}</p>
+					{% if banner.button.enable %}
+					<a href="{{banner.button.link}}" class="btn btn-secondary">{{banner.button.label}}</a>
+					{% endif %}
+				</div>
+			</div>
+			<div class="banner-img d-none d-lg-block">
+				<img src="{{ banner.image | relative_url }}" alt="contact" class="img-fluid">
+			</div>
+		</div>
+	</div>
+</section>
+<!-- Slider End -->

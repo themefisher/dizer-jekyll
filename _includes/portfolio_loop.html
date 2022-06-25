@@ -1,0 +1,17 @@
+{% for portfolio in site.portfolios %}
+<div class="col-lg-4 col-6 mb-4 shuffle-item" data-groups="[{% for category in portfolio.categories %} &quot;{{ category | downcase | slugify }}&quot; {% unless forloop.last %}, {% endunless %} {% endfor %}]">
+  <div class="position-relative inner-box">
+    <div class="image position-relative ">
+      <img src="{{portfolio.thumbnail | relative_url }}" alt="portfolio-image" class="img-fluid w-100 d-block" />
+      <div class="overlay-box">
+        <div class="overlay-inner">
+          <a class="overlay-content text-center" href="{{portfolio.url | relative_url }}">
+            <h5 class="mb-0 text-white">{{portfolio.title}}</h5>
+            <p>{% for category in portfolio.categories %} {{category}}{% unless forloop.last %} , {% endunless %} {% endfor %}</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endfor %}

@@ -1,0 +1,47 @@
+---
+layout: default
+header_image: "/assets/images/bg/about-bg.jpg"
+title: "Portfolio"
+description: "Dolor sit amet consectetur elit sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis."
+---
+
+{% include page_header.html %}
+<!-- Portfolio  Start -->
+<section class="section portfolio-2">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-lg-10 text-center">
+				<span class="h5 text-color text-uppercase">
+					my works
+				</span>
+				<h3 class="mb-5 mt-2">A collection of some recently completed projects, covering a wide range of design disciplines</h3>
+			</div>
+		</div>
+
+    <div class="row align-items-center mb-5">
+      	<div class="col-12 text-center">
+	        <div class="btn-group btn-group-toggle " data-toggle="buttons">
+	          <label class="btn border-0 active">
+	            <input type="radio" name="shuffle-filter" value="all" checked="checked" />All Projects
+	          </label>
+	          <label class="btn border-0">
+	            <input type="radio" name="shuffle-filter" value="design" />UI/UX Design
+	          </label>
+	          <label class="btn border-0">
+	            <input type="radio" name="shuffle-filter" value="branding" />branding
+	          </label>
+	          <label class="btn border-0">
+	            <input type="radio" name="shuffle-filter" value="illustration" />Web Development
+	          </label>
+	           <label class="btn border-0">
+	            <input type="radio" name="shuffle-filter" value="photo" />Photography
+	          </label>
+	        </div>
+      </div>
+    </div>		
+    <div class="row shuffle-wrapper portfolio-gallery">
+      {% include portfolio_loop.html %}
+    </div>
+	</div>
+</section>
+<!-- Portfolio  End -->

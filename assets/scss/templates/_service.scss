@@ -1,0 +1,64 @@
+.service {
+	position: relative;
+
+	.service-item {
+		padding: 0px 30px;
+
+		p {
+			color: rgba(255, 255, 255, .8);
+			margin-bottom: 0px;
+		}
+
+		i {
+			font-size: 60px;
+		}
+	}
+}
+
+.overlay-shape{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	top: 0;
+}
+
+.icon-md {
+	font-size: 60px;
+}
+
+// Service-2 Style
+
+
+.service-2 {
+	background: #ffe5e5;
+
+	.service-item {
+		padding: 80px 0px;
+	}
+
+	.border-left,
+	.border-right {
+		border-color: #e5c5c5 !important;
+	}
+}
+
+// Service-Main
+
+.service-main {
+	.border-left {
+		border-width: 1px;
+		border-style: solid;
+		border-image: linear-gradient(to top,
+				rgba(0, 0, 0, 0.1),
+				rgba(0, 0, 0, 0)) 1 100%
+	}
+
+	.border-left-top {
+		border-width: 1px;
+		border-style: solid;
+		border-image: linear-gradient(to bottom,
+				rgba(0, 0, 0, 0.1),
+				rgba(0, 0, 0, 0)) 1 100%
+	}
+}

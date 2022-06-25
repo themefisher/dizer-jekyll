@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Poppins:400,500,700');
+
+
+html,body{
+  width: 100%;
+  height: 100%;
+}
+html{
+  overflow-x: hidden;
+}
+
+body {
+  font-family: $body-font;
+  -webkit-font-smoothing: antialiased;
+  font-size: 15px;
+  font-weight: 400;
+  line-height:26px;
+}
+
+p{
+  color: $black-light;
+}
+h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6 {
+  font-family: $heading-font;
+  color: #222530;
+  font-weight: 500;
+}
+
+h1 ,.h1{
+  font-size: 45px;
+  text-transform: none;
+  text-transform: capitalize;
+  
+}
+
+h2,.h2 {
+  font-size: 42px;
+  line-height: 52px;
+  text-transform: capitalize;
+  
+}
+
+h3,.h3 {
+  font-size: 40px;
+  line-height: 50px;
+}
+
+h4,.h4 {
+  font-size: 24px;
+  line-height: 30px;
+}
+
+h5,.h5 {
+  font-size: 20px;
+  line-height: 34px;
+}
+
+h6,.h6 {
+  font-size: 16px;
+  line-height: 26px;
+}
+
+
+.text-sm{
+  font-size: 14px;
+}
+
+

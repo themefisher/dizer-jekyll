@@ -1,0 +1,72 @@
+.bg-primary {
+	background: $primary-color !important;
+}
+
+.bg-secondary {
+	background: $secondary-color !important;
+}
+
+.bg-extra {
+	background: $extra-color;
+}
+
+.bg-blue{
+	background: $blue !important;
+}
+
+.text-color {
+	color: $primary-color;
+}
+
+.text-black {
+	color: $black;
+}
+
+.section {
+	padding: 120px 0px;
+}
+
+.section-sm {
+	padding: 80px 0px 65px 0px;
+}
+
+.content.text-white *{
+	color: $white;
+}
+
+a {
+	transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-webkit-transition: all .3s ease;
+	-o-transition: all .3s ease;
+}
+
+a:hover {
+	color: $primary-color !important;
+}
+
+a:hover,
+a:focus {
+	outline: 0;
+	text-decoration: none;
+}
+
+.text-yello {
+	color: $yello;
+}
+
+.text-sm-2 {
+	font-size: 18px;
+}
+
+.overflow-hidden {
+	overflow: hidden !important;
+}
+
+.slick-slide {
+	outline: 0;
+
+	img {
+		display: inline-block;
+	}
+}

@@ -1,0 +1,89 @@
+<!-- Footer section start -->
+<footer class="section bg-secondary position-relative pb-0">
+	<img src="/assets/images/bg/footer-bg.png" alt="" class="overlay-shape">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-3 col-md-6">
+				<div class="footer-widget  mb-5 mb-lg-0">
+					<h4 class="font-weight-bold text-white mb-3">About Us</h4>
+					{{site.footer_content | markdownify}}
+
+					<ul class="list-inline socials-links">
+						{% for social in site.social %}
+						<li class="list-inline-item mb-2">
+							<a target="_blank" href="{{social.link}}" class="active"><i class="{{social.icon}}"></i></a>
+						</li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+
+			<div class="col-lg-3 ml-lg-auto mb-5 mb-lg-0 col-md-6">
+				<div class="footer-widget">
+					<h4 class="text-white mb-3">Navigation</h4>
+
+					<ul class="list-unstyled lh-38">
+						{% for menu in site.data.navigation.footer %}
+						<li><a href="{{menu.link | relative_url }}">{{menu.name}}</a></li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>		
+			<div class="col-lg-2 col-md-6">
+				<div class="footer-widget  mb-5 mb-lg-0">
+					<h4 class="text-white mb-3">Services</h4>
+					<ul class="list-unstyled lh-38">
+						<li><a href="#">Brand Design</a></li>
+						<li><a href="#">seo & marketing</a></li>
+						<li><a href="#">creative design</a></li>
+						<li><a href="#">photography</a></li>
+						<li><a href="#">print design</a></li>
+					</ul>
+				</div>
+			</div>		
+			<div class="col-lg-3 col-md-6">
+				<div class="footer-widget">
+					<h4 class="text-white mb-3">Contact Info</h4>
+					<ul class="list-unstyled lh-38">
+						<li>{{site.address}}</li>
+						<li><a href="tel:{{site.phone}}">{{site.phone}}</a></li>
+						<li><a href="mailto:{{site.email}}">{{site.email}}</a></li>
+					</ul>
+				</div>
+			</div>		
+		</div>
+	</div>
+
+	<div class="footer-btm ">
+		<div class="container border-top py-4 mt-5">
+			<div class="row align-items-center justify-content-md-between">
+				<div class="col-12 col-lg-4">
+					<div class="text-center text-lg-left "> <span>{{ site.copyright }}</span></div>
+				</div>
+				<div class="col-lg-4 text-center col-12">
+					<a href="{{site.baseurl}}">
+						<img src="{{site.logo | relative_url}}" alt="{{site.title}}" class="img-fluid">
+					</a>
+				</div>
+				<div class="col-lg-4 col-12">
+					<div class="text-center text-lg-right">
+						{% for menu in site.data.navigation.bottom %}
+						<a href="{{menu.link | relative_url }}">{{menu.name}} {% unless forloop.last %} <span class="mx-2">|</span> {% endunless %}</a>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- Footer End -->
+
+<script src="{{site.google_map_api}}"></script>
+
+<!-- JS Plugins -->
+{% for js in site.data.plugins.js %}
+<script src="{{ js | relative_url }}"></script>
+{% endfor %}
+
+<!-- Main Script -->
+<script src="{{ '/assets/js/script.js' | relative_url }}"></script>

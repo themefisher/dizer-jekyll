@@ -1,0 +1,36 @@
+<!-- PortfoliO Start -->
+<section class="pt200 section portfolio-2">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10">
+        <span class="h5 text-color text-uppercase">
+          my works
+        </span>
+        <h3 class="mb-4 mt-2">A collection of some recently completed projects, covering a wide range of design
+          disciplines</h3>
+      </div>
+    </div>
+
+    <div class="d-flex flex-wrap align-items-center justify-content-between mb-5">
+      <div class="btn-group btn-group-toggle " data-toggle="buttons">
+
+        <label class="btn border-0 active">
+          <input type="radio" name="shuffle-filter" value="all" checked="checked" />All Projects
+        </label>
+        {% assign categories = site.portfolios| map: 'categories' | join: ',' | split: ',' | uniq %}
+        {% for category in categories %}
+        <label class="btn border-0">
+          <input type="radio" name="shuffle-filter"
+            value="{{ category | downcase | slugify }}" />{{ category }}
+        </label>
+        {% endfor %}
+      </div>
+      <a href="portfolio-2.html" class="btn btn-outline-primary">All work</a>
+    </div>
+
+    <div class="row shuffle-wrapper portfolio-gallery">
+      {% include portfolio_loop.html %}
+    </div>
+  </div>
+</section>
+<!-- Portfolio End -->

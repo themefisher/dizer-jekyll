@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Dizer - Jekyll Theme</title>
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600" type="text/css" media="all">
+  <link rel="stylesheet" href="assets/css/style.css" type="text/css" media="all">
+
+</head>
+<body>
+  <div class="wrap">
+    <header class="site-header" role="banner">
+      <h1 class="site-title">Dizer</h1>
+      <p class="site-description">Theme Documentation</p>
+    </header><!-- .site-header -->
+    <div id="main">
+      <div class="intro">
+        <p>First of all a huge thanks for purchasing this theme! If you have any questions that are not answered here, please feel free to email via our user page <a href="https://getjekyllthemes.com/">here</a>.</p>
+        <ul class="byline">
+          <li><em>Email:</em> <a href="mailto:getjekyllthemes@gmail.com">getjekyllthemes@gmail.com</a></li>
+          <li><em>Twitter:</em> <a href="https://twitter.com/getjekyllthemes">getjekyllthemes</a></li>
+        </ul>
+      </div><!-- .intro -->
+
+      <div id="content" role="main">
+
+        <div class='alert alert-primary'>
+          👋 &nbsp; For the most recent updated documentation, please check the <a href="http://getjekyllthemes.com" class='alert-link'>online version</a>&nbsp; 👉
+        </div>
+
+        <section>
+          <h2 id="toc">Table of Contents</h2>
+          <ol>
+          	<li><a href="#installation">installation</a></li>
+            <li><a href="#Configurations">Configurations</a></li>
+            <li><a href="#Deployment">Deployment</a></li>
+            <li><a href="#createPost">Create Post</a></li>
+            <li><a href="#createPage">Create Page</a></li>
+            <li><a href="#Navigation">Navigation</a></li>
+            <li><a href="#DisqusComments">Disqus Comments</a></li>
+            <li><a href="#GoogleAnalytics">Google Analytics</a></li>
+            <li><a href="#SocialMediaLinks">Social Media Links</a></li>
+          </li>
+          <li><a href="#Credits">Credits</a></li>
+        </ol>
+        <hr />
+      </section>
+
+	 <section>
+	        <h3 id="installation">installation</h3>
+
+	        <p><b>Install And Setup In Github</b></p>
+	        <ul style="list-style: none;padding: 0; margin: 0;">
+	        	<li> <b>01</b> Go To <a href="https://github.com/"> Github </a> And Sign in </li>
+	        	<li> <b>02</b> Create A New Repository, for example "jekyll-site" </li>
+	        	<li> <b>03</b> Open The Theme Folder And Unzip it </li>
+	        	<li> <b>04</b> Open CMD (Command Prompot), type "git init" in the command prompot </li>
+	        	<li> <b>05</b> In The Command Prompot, type "git remote add origin < your github repository url >"  for example <code> git remote add origin https://github.com/Rubel-hossain/jekyll-site.git</code></li>
+	            <li> <b>06</b> In The Command Prompot, type "git add ." </li>
+	            <li> <b>07</b> In The Command Prompot, type "git commit -m 'init' " </li>
+	            <li> <b>08</b> In The Command Prompot, type "git push -u origin master" </li>
+	            <li> <b>09</b> Go To <a href="https://netlify.com/">netlify </a> Login With Github </li>
+	            <li> <b>10</b> Click Add Site Button, Select Your Repository And Click Deploy, <b> Done Your Site Is Live Now </b></li>
+	        </ul>
+	 </section>
+      <section>
+        <h3 id="Configurations">Configurations</h3>
+
+        <p>Dizer theme comes with different customizations in the <code>_config.yml</code> <a href="https://jekyllrb.com/docs/configuration/">configuration</a> file:</p>
+
+<pre><code>
+
+title: "Dizer -  Multipurpose Business & Corporate Jekyll Template"
+email: "getjekyllthemes@gmail.com"
+description: >- # this means to ignore newlines until "baseurl:"
+ Dizer - Multipurpose Business & Corporate Jekyll Template Jekyll Theme For Mobile Apps Download Landing Page And Blogging.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://dizer.netlify.com" # the base hostname & protocol for your site, e.g. http://example.com or  https://Dizerjk.netlify.com
+facebook_url: https://www.facebook.com/getjekyllthemes
+twitter_url: https://twitter.com/getjekyllthemes
+pinterest_url: https://www.pinterest.com/getjekyllthemes
+linkedin_url: https://www.linkenin.com/getjekyllthemes
+instagram_url: https://www.instagram.com/getjekyllthemes
+youtube_url: https://www.youtube.com/getjekyllthemes
+logo: "/assets/images/logo.png"
+logo_icon: "/assets/images/logo-b.png"
+mailchimp_list: "https://themeix.us16.list-manage.com/subscribe/post?u=307862c135e4548eecf86f389&amp;id=342411fb35"
+
+permalink: "/:title"
+
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-paginate-v2
+  - jekyll-archives
+
+cover_image: "/assets/images/bg/about-bg.jpg"
+
+
+########################################################
+# Site configuration for the Jekyll 3 Pagination Gem
+# The values here represent the defaults if nothing is set
+pagination:
+  
+  # Site-wide kill switch, disabled here it doesn't run at all 
+  enabled: true
+
+  # Set to 'true' to enable pagination debugging. This can be enabled in the site config or only for individual pagination page
+  debug: false
+
+  # The default document collection to paginate if nothing is specified ('posts' is default)
+  collection: 'posts'
+
+  # How many objects per paginated page, used to be `paginate` (default: 0, means all)
+  per_page: 6
+
+  # The permalink structure for the paginated pages (this can be any level deep)
+  #permalink: '/page/:num/' # Pages are index.html inside this folder (default)
+  permalink: '/blog/:num/' # Pages are simple html file
+  #permalink: '/page/:num' # Pages are html files, linked jekyll extensionless permalink style.
+
+  # Optional the title format for the paginated pages (supports :title for original page title, :num for pagination page number, :max for total number of pages)
+  title: ':title - page :num'
+
+  # Limit how many pagenated pages to create (default: 0, means all)
+  limit: 0
+  
+  # Optional, defines the field that the posts should be sorted on (omit to default to 'date')
+  sort_field: 'date'
+
+  # Optional, sorts the posts in reverse order (omit to default decending or sort_reverse: true)
+  sort_reverse: true
+
+  # Optional, the default category to use, omit or just leave this as 'posts' to get a backwards-compatible behavior (all posts)
+  category: 'posts'
+
+  # Optional, the default tag to use, omit to disable
+  tag: ''
+
+  # Optional, the default locale to use, omit to disable (depends on a field 'locale' to be specified in the posts, 
+  # in reality this can be any value, suggested are the Microsoft locale-codes (e.g. en_US, en_GB) or simply the ISO-639 language code )
+  locale: '' 
+
+ # Optional,omit or set both before and after to zero to disable. 
+ # Controls how the pagination trail for the paginated pages look like. 
+  trail: 
+    before: 2
+    after: 2
+
+  # Optional, the default file extension for generated pages (e.g html, json, xml).
+  # Internally this is set to html by default
+  extension: 'html'
+
+  # Optional, the default name of the index file for generated pages (e.g. 'index.html')
+  # Without file extension
+  indexpage: 'index'
+
+tag_page_layout: tag_page
+tag_page_dir: tag
+tag_permalink_style: pretty
+
+jekyll-archives:
+  enabled: all
+  layout: category
+  permalinks:
+    category: '/category/:name/'
+
+feed:
+  collections:
+    posts:
+      path: "/index.xml"
+
+</code></pre>
+
+      <hr>
+      <p> If You Want To Change Your Logo, In the config.yml just change the logo url.
+<code>
+logo: "/assets/images/logo.png"
+logo_icon: "/assets/images/logo-b.png"
+</code>
+     <p>For The Contact Form or Contact Page You Can Use Any Third Party Library, GO To <a href="https://www.cognitoforms.com/" target="__blank">https://www.cognitoforms.com/ </a> Login , Create New Form. A Iframe Will Generate For You </p>
+     <p> open Theme folder >> __cncludes forlde >> contact_form.html And Replace Your Form Iframe</p>
+<code>
+< iframe src="https://services.cognitoforms.com/f/2MfKsbsiVkKVzTd0v1tJJQ?id=5" style="position:relative;width:1px;min-width:100%;*width:100%;" frameborder="0" scrolling="yes" seamless="seamless" height="652" width="100%"></ iframe>
+< script src="https://services.cognitoforms.com/scripts/embed.js"></ script>
+</code>
+      </section>
+
+      <section>
+        <h3 id="Deployment">Deployment</h3>
+        <p>To install locally, more to the theme root and run <code>bundle install</code> to install the dependencies, then run <code>jekyll serve</code> to start the jekyll server.</p>
+
+        <p>I would recommend checking the <a href="https://jekyllrb.com/docs/deployment-methods/">Deployment methods</a> page on Jekyll website.</p>
+        <hr>
+      </section>
+
+      <section>
+        <h3 id="createPost">Create Post</h3>
+
+        <p>To create a new post, you can create a new markdown file inside the <code>_posts</code> directory, following the <a href="https://jekyllrb.com/docs/posts/#creating-post-files">recommended file structure</a>, these are the page configuration you can add.</p>
+
+        <p>The following is an example post file.</p>
+
+        <br>
+
+        <p>You can set the author, featured or not, tags, and the post image</p>
+
+        <p>The <code>featured</code> key is to mark the post as a featured post, this will add a simple star icon (☆) to the post created.</code>
+
+        <p>To keep things more organized, add post images to <strong>/images/pages</strong> directory, and add add page images to <strong>/images/pages</strong> directory.</p>
+
+        <p>To create a draft post, create your draft file under the <strong>_drafts</strong> directory, and you can find more information at <a href="http://jekyllrb.com/docs/drafts/">Working with drafts</a></p>
+        <hr>
+      </section>
+
+      <section>
+        <h3 id="createPage">Create Page</h3>
+
+        <p>To create a new page, just create a new markdown file inside the <code>_pages</code> directory, and these are the page configuration you can add.</p>
+
+        <p>The following is the <code>about.md</code> file that you can find as an example included in the theme.</p>
+
+
+        <br>
+
+        <p>Things you can change are: <code>title</code>, <code>permalink</code>, and <code>image</code> path.</p>
+
+        <hr>
+      </section>
+
+      <section>
+        <h3 id="Navigation">Navigation</h3>
+
+        <p>The navigation on the header and footer will include all the links to the pages you have created.</p>
+
+        <hr>
+
+      </section>
+
+      <section>
+        <h3 id="GoogleAnalytics">Google Analytics</h3>
+
+        <p>To integrate Google Analytics, open <code>_includes/analytics.html</code> and add your Google Analytics code.</p>
+
+        <hr>
+
+      <section>
+        <h3 id="SocialMediaLinks">Social Media Links</h3>
+
+        <p>Social media icons are placed in config.yml</p>
+       
+<pre>
+facebook_url: "https://www.facebook.com/getjekyllthemes"
+twitter_url: "https://twitter.com/getjekyllthemes"
+linkedin_url: "https://www.linkenin.com/getjekyllthemes"
+pinterest_url: "https://www.pinterest.com/getjekyllthemes"
+</pre>
+        <hr>
+      </section>
+
+      <section>
+        <h3 id="Credits">Credits</h3>
+        <p>We have used the following scripts, fonts or other files as listed.</p>
+        <ul>
+          <li><a href="http://evil-icons.io/">Evil Icons</a></li>
+          <li><a href="http://fitvidsjs.com/">FitVids.js</a></li>
+          <li><a href="https://github.com/pattex/jekyll-tagging">jekyll/tagging</a></li>
+          <li>Preview Images form <a href="https://unsplash.com/">unsplash.com</a> & <a href="https://www.pexels.com/">pexels.com</a></li>
+        </ul>
+        <hr>
+      </section>
+
+      <p><a href="#toc">Go To Table of Contents</a></p>
+    </div><!-- #content -->
+  </div><!-- #main -->
+  <footer class="site-info" role="contentinfo">
+    <p>© 2020 getjekyllthemes. All rights reserved.</p>
+  </footer><!-- .site-info -->
+</div><!-- .wrap -->
+</body>
+</html>

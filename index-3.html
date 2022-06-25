@@ -1,0 +1,96 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+
+<body data-spy="scroll" data-target="#ftco-navbar-spy" data-offset="0">
+  <!-- Navuigation Start -->
+  <!-- Header Start -->
+  <nav class="navbar navbar-expand-lg fixed-top main-nav main-nav-black hide-nav" id="main-nav">
+    <div class="container">
+      <a class="navbar-brand" href="{{site.baseurl}}">
+        <img src="{{site.logo | relative_url}}" alt="{{site.title}}" class="img-fluid w-logo" />
+      </a>
+
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbars"
+        aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="ti-menu"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbars">
+        {% include navigation.html %}
+      </div>
+    </div>
+  </nav>
+  <!-- Navigation End -->
+
+  <nav class="navbar navbar-vertical fixed-left navbar-expand-lg navbar-light" id="sidebar">
+    <div class="container">
+
+      <!-- Toggler -->
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#sidebarCollapse"
+        aria-controls="sidebarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Brand -->
+      <a class="navbar-brand" href="{{site.baseurl}}">
+        <img src="{{site.logo | relative_url}}" class="navbar-brand-img ml-auto" alt="{{site.title}}" />
+      </a>
+
+      <!-- Collapse -->
+      <div class="navbar-collapse collapse" id="sidebarCollapse">
+        {% include navigation_2.html %}
+        <ul class="list-inline menu-socials-links fixed-bottom">
+          {% for social in site.social %}
+          <li class="list-inline-item mb-2">
+            <a href="{{ social.link }}" class="active"><i class="{{social.icon}}"></i></a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div> <!-- / .container -->
+  </nav>
+
+  <div class="main-content">
+    <div class="container">
+      <section class="section portfolio-2">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-10 text-center">
+              <span class="h5 text-color text-uppercase">
+                our works
+              </span>
+              <h3 class="mb-5 mt-2">A collection of some recently completed projects, covering a wide <span
+                  class="text-color">range of design disciplines</span></h3>
+            </div>
+          </div>
+
+          <div class="row justify-content-center align-items-center text-center mb-5">
+            <div class="col-12">
+              <div class="btn-group btn-group-toggle " data-toggle="buttons">
+                <label class="btn border-0 active">
+                  <input type="radio" name="shuffle-filter" value="all" checked="checked" />All Projects
+                </label>
+                {% assign categories = site.portfolios| map: 'categories' | join: ',' | split: ',' | uniq %}
+                {% for category in categories %}
+                <label class="btn border-0">
+                  <input type="radio" name="shuffle-filter" value="{{ category | downcase | slugify }}" />{{ category }}
+                </label>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+
+          <div class="row shuffle-wrapper portfolio-gallery">
+            {% include portfolio_loop.html %}
+          </div>
+        </div>
+      </section>
+    </div>
+    {% include footer_2.html %}
+  </div>
+</body>
+
+</html>

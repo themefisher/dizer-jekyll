@@ -1,0 +1,16 @@
+<!-- Clients Start -->
+{% assign client = site.data.homepage_2.clients %}
+{% if client.enable %}
+<section class="section-sm bg-secondary">
+	<div class="container">
+		<div class="row clients-wrap">
+			{% for logo in client.logos %}
+			<div class="text-center">
+				<img src="{{ logo | relative_url }}" alt="" class="img-fluid mx-auto">
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</section>
+{% endif %}
+<!-- Clients End -->

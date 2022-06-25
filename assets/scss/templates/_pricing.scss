@@ -1,0 +1,63 @@
+.lh-45{
+	line-height: 45px;
+}
+
+.pricing{
+	background: url("../images/bg/bg-pricing.jpg") 50% 50% no-repeat;
+	background-size: cover;
+
+	.card{
+		-webkit-transition: all .45s ease;
+		   -moz-transition: all .45s ease;
+		    -ms-transition: all .45s ease;
+		     -o-transition: all .45s ease;
+		        transition: all .45s ease;
+		.card-header{
+			background: transparent;
+
+			span{
+				background: #ffe5e5;
+				padding: 2px 23px;
+				border-radius: 3px;
+			}
+
+
+			p{
+				font-size: 18px;
+			}
+		}
+	}
+
+	.card.featured{
+		background: $extra-color;
+
+		.card-header{
+			border-bottom-color: rgba(255,255,255,.3);
+			background:url("../images/bg/p.png") 40% 0px no-repeat;
+		}
+		
+		span{
+			background: #a350ff;
+			color: $white;
+		}
+		h3{
+			color: $white;
+		}
+		p{
+			color: $white;
+		}
+
+		ul>li{
+			color: $white;
+		}
+
+		.btn-outline-primary{
+			background: $primary-color;
+			color: $white;
+		}
+
+		.text-muted{
+			color: rgba(255,255,255,.7)!important;
+		}
+	}
+}

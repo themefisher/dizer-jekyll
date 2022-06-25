@@ -1,0 +1,95 @@
+---
+layout: default
+header_image: "/assets/images/bg/bg-portfolio.jpg"
+title: "Contact Us"
+description: "Dolor sit amet consectetur elit sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad
+minim veniam quis."
+---
+
+{% include page_header.html %}
+
+<section class="contact-form-wrap section">
+	<div class="container">
+		<div class="row justify-content-center align-items-center bg-gray">
+			<div class="col-lg-10">
+				<div class="contact-content pl-lg-5 mb-5 mb-lg-0">
+					<h3 class="mb-4 font-weight-bold">Contact Information</h3>
+					<p>Excepteur sint ocacat cupidatat non proi dent sunt in culpa qui officia deserunt.mollit anim id est
+						laborum. sed ut pers piciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium
+						totam rem aperiam eaque ipsa quae ab illo</p>
+
+					<div class="row mt-5">
+						<div class="col-lg-4">
+							<div class="contact-info mt-3">
+								<i class="ti-location-pin text-color"></i>
+								<div class="info">
+									<h4>Our Address</h4>
+									<p>92214-291, Avenida Emília Ferreira, 043 Vila Irene - MA</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="contact-info mt-3">
+								<i class="ti-mobile text-color"></i>
+								<div class="info">
+									<h4>Call Us</h4>
+									<p>(003) 104-6706-231 <br>(799) 376-4681-232</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="contact-info mt-3">
+								<i class="ti-email text-color"></i>
+								<div class="info">
+									<h4>Email Us</h4>
+									<p>info@dizer.com <br>info@example.com</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Map Start -->
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12">
+				<div class="google-map position-relative my-5">
+					<div id="map" data-latitude="51.507351" data-longitude="-0.127758" data-marker="/assets/images/marker.png">
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Map ENd -->
+
+		<div class="row justify-content-center">
+			<div class="col-lg-10 mt-4">
+				<div class="contact-form">
+					<h3 class="mb-4 font-weight-bold">Get In Touch</h3>
+					<form class="contact__form" method="post" action="{{site.contact_form_action}}">
+						<!-- form message -->
+						<div class="row">
+							<div class="col-lg-6">
+								<div class="form-group">
+									<input class="form-control" type="text" name="name" id="name" placeholder="Name*">
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<div class="form-group">
+									<input class="form-control" type="text" name="email" id="email" placeholder="Email*">
+								</div>
+							</div>
+							<div class="col-12">
+								<textarea class="form-control mt-3 mb-4" name="message" id="message" cols="30" rows="6"
+									placeholder="Message"></textarea>
+								<button type="submit" class="btn btn-primary" value="Submit Message"> Submit Message</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+{% include call_to_action.html %}

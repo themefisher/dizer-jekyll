@@ -1,0 +1,124 @@
+.about{
+	position: relative;
+
+	&:before{
+		position: absolute;
+		content:"";
+		background: url("../images/about/pattern-bg.png")no-repeat;
+		width:90%;
+		height: 100%;
+		left: 97%;
+		top: 23px;
+	}
+	.about-img{
+		position: relative;
+		.video-play{
+			position: absolute;
+			right: -70px;
+			bottom: 70px;
+			@include desktop-lg {
+				right: 50%;
+				bottom: 50%;
+				transform: translate(50%, 50%);
+			}
+			a{
+				display: inline-block;
+				color: $white;
+				background: $extra-color;
+				width: 90px;
+				height: 90px;
+				text-align: center;
+				border-radius: 100%;
+				padding-top: 30px;
+			}
+
+			.play-bg{
+				position: relative;
+				padding-top: 16px;
+				width: 130px;
+				height: 130px;
+				border: 2px solid $white;
+				border-radius: 100%;
+				text-align: center;
+			}
+			.play-bg::after {
+			    position: absolute;
+			    right: 0px;
+			    top: 0px;
+			    border-right: 2px solid $secondary-color;
+			    width: 100%;
+			    height: 100%;
+			    z-index: -1;
+			    content: "";
+			    border-radius: 100%;
+			}
+		}
+
+		&:before{
+			position: absolute;
+			content:"";
+			background: url("../images/about/pattern-bg.png")no-repeat;
+			width:100%;
+			height: 100%;
+			left: -56px;
+			top: 56px;
+			width: 100%;
+			height: 100%;
+			z-index: -1;
+		}
+	}
+}
+
+
+// Backgrounds
+
+.bg-1{
+	background: url("../images/bg/about-bg.jpg") no-repeat;
+	background-size: cover;
+}
+
+.about-banner{
+	background: url("../images/bg/about-bg-2.jpg") no-repeat;
+	background-size: cover;
+}
+.service-bg{
+	background: url("../images/bg/service-bg.jpg") 0% 50% no-repeat;
+	background-size: cover;
+}
+.portfolio-bg{
+	background: url("../images/bg/bg-portfolio.jpg") 0% 40% no-repeat;
+	background-size: cover;
+}
+.blog-bg{
+	background: url("../images/bg/blog-bg.jpg") 0% 40% no-repeat;
+	background-size: cover;
+}
+
+.bg-2{
+	background: url("../images/bg/bg-10.jpg") 53% 5% no-repeat;
+}
+
+.header-padding{
+	padding: 220px 0px 140px 0px;
+}
+
+.text-lg{
+	font-size: 50px;
+	line-height: 65px;
+}
+
+.about-banner{
+	padding: 251px 0px 175px 0px;
+
+	.socials-links{
+		li a {
+			color: $black-light;
+			border: 1px solid rgba(0,0,0,0.08);
+		}
+		
+	}
+}
+
+.text-black{
+	color: $black;
+}

@@ -1,0 +1,42 @@
+.latest-blog {
+	&:before {
+		position: absolute;
+		content: "";
+		background: url("../images/about/pattern-bg.png")no-repeat;
+		width: 100%;
+		height: 100%;
+		left: -63px;
+		top: 66%;
+	}
+
+	h4 {
+		font-weight: 600;
+	}
+}
+
+.blog-category {
+	position: absolute;
+	content: "";
+	background: $white;
+	display: inline-block;
+	padding: 1px 10px;
+	z-index: 1;
+	left: 7%;
+	top: 9%;
+	text-transform: capitalize;
+	color: $black;
+}
+
+.blog-img.active-state {
+	&:before {
+		content: "";
+		background: url("../images/about/pattern-bg.png")no-repeat;
+		width: 100%;
+		height: 100%;
+		left: 73%;
+		top: -55px;
+		position: absolute;
+		z-index: -1;
+	}
+
+}

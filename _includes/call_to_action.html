@@ -1,0 +1,15 @@
+{% if site.cta.enable %}
+<section class="position-relative section-sm bg-extra">
+	<img src="{{site.cta.bg_image | relative_url }}" class="overlay-shape">
+	<div class="container">
+		<div class="row align-items-center">
+			<div class="col-lg-9 mb-5 mb-lg-0">
+				<h2 class="text-white mb-0">{{ site.cta.title}}</h2>
+			</div>
+			<div class="col-lg-3">
+				<a href="{{site.cta.button.link | relative_url }}" class="btn btn-primary">{{site.cta.button.label}}</a>	
+			</div>
+		</div>
+	</div>
+</section>
+{% endif %}

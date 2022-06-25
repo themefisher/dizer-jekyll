@@ -1,0 +1,29 @@
+<!-- About Start -->
+{% assign about = site.data.homepage_2.about %}
+{% if about.enable %}
+<section class="section about overflow-hidden">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-5">
+				<div class="about-img">
+					<img src="{{about.video_thumb}}" alt="" class="img-fluid w-100">
+					<div class="video-play">
+						<div class="play-bg">
+							<a class="popup-youtube" href="{{about.video_url}}"><i class="ti-control-play"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-6 col-md-7 offset-lg-1 mt-5 mt-md-0">
+				<span class="text-color h5 text-uppercase">{{about.subtitle}}</span>
+				<h3 class="mb-4 mt-3">{{ about.title }}</h3>
+				{{ about.content | markdownify }}
+				{% if about.button.enable %}
+				<a href="{{ about.button.link | relative_url }}" class="btn btn-primary">{{about.button.label}}</a>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+</section>
+{% endif %}
+<!-- About End -->
