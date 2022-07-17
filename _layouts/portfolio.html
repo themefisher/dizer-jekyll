@@ -23,7 +23,7 @@ layout: default_2
             {% for portfolio in site.portfolios limit:"3" %}
 			<div class="col-lg-4">
 				<div class="portfolio-block text-center border-0 ">
-				    <img src="{{portfolio.thumbnail}}" class="img-fluid" alt="{{portfolio.title}}"/>
+				    <img src="{{portfolio.thumbnail | relative_url}}" class="img-fluid" alt="{{portfolio.title}}"/>
 				    <a class="card-img-overlay" href="{{portfolio.url}}">
 				      <h5 class="card-title text-white mb-0">{{portfolio.title}}</h5>
 				      <p class="card-text text-white text-uppercase text-sm">{{portfolio.category}}</p>

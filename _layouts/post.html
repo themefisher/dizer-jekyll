@@ -19,7 +19,7 @@ layout: default_2
 		</div>
         {% if page.post_image %}
 		<div class="blog-img position-relative mt-5 mb-5">
-			<img src="{{page.post_image}}" alt="{{post.title}}" class="img-fluid w-100"/>
+			<img src="{{page.post_image | relative_url}}" alt="{{post.title}}" class="img-fluid w-100"/>
 		</div>
         {% endif %}
 		<div class="row justify-content-center">
@@ -53,7 +53,7 @@ layout: default_2
 
 <!-- Call To action -->
 <section class="position-relative section-sm bg-extra">
-	<img src="/assets/images/bg/cta-bg-2.png" alt="" class="overlay-shape">
+	<img src="{{'/assets/images/bg/cta-bg-2.png' | relative_url}}" alt="" class="overlay-shape">
 	<div class="container">
 		<div class="row align-items-center">
 			<div class="col-lg-9 mb-5 mb-lg-0">

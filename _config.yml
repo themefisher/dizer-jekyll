@@ -1,5 +1,5 @@
-baseurl: "/" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com or  https://Dizerjk.netlify.com
+baseurl: "/dizer-jekyll" # the subpath of your site, e.g. /blog
+url: "https://demo.themefisher.com" # the base hostname & protocol for your site, e.g. http://example.com or  https://Dizerjk.netlify.com
 title: "Dizer -  Multipurpose Business & Corporate Jekyll Template"
 email: "themefisher@gmail.com"
 phone: "+21 123 456 5523"
@@ -71,7 +71,7 @@ pagination:
   enabled: true
 
   # Set to 'true' to enable pagination debugging. This can be enabled in the site config or only for individual pagination page
-  debug: false
+  debug: true
 
   # The default document collection to paginate if nothing is specified ('posts' is default)
   collection: "posts"

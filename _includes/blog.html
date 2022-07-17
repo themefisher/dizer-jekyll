@@ -14,14 +14,14 @@
 			<div class="col-lg-4 col-md-6  mb-4 mb-lg-0">
 				{% if post.post_image %}
 				<div class="blog-img position-relative">
-					<a href="{{post.url}}"><img src="{{post.post_image}}" alt="{{post.title}}" class="img-fluid w-100"></a>
+					<a href="{{post.url | relative_url}}.html"><img src="{{post.post_image | relative_url}}" alt="{{post.title}}" class="img-fluid w-100"></a>
 					{% if post.tags %}
 					<a class="blog-category"
 						href="/tag/{{post.tags[0] | limit:'1' | downcase | replace: ' ','_'}}">{{post.tags[0] | limit:"1" | replace:',','' }}</a>
 					{% endif %}
 				</div>
 				{% endif %}
-				<a href="{{post.url}}">
+				<a href="{{post.url | relative_url}}.html">
 					<h4 class="mt-4 mb-2">{{post.title}}</h4>
 				</a>
 				<div class="post-meta text-uppercase mb-3">

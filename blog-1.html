@@ -4,8 +4,6 @@ header_image: "/assets/images/bg/blog-bg.jpg"
 title: "Our Blog"
 description: "Dolor sit amet consectetur elit sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad
 minim veniam quis."
-pagination:
-enabled: true
 ---
 
 {% include page_header.html %}
@@ -13,15 +11,15 @@ enabled: true
 <section class="section">
 	<div class="container">
 		<div class="row justify-content-center">
-			{% for post in paginator.posts %}
+			{% for post in site.posts %}
 			<div class="col-lg-4 col-md-6">
 				<div class="blog-item mb-5">
 					{% if post.post_image %}
 					<div class="blog-img position-relative">
-						<a href="{{post.url}}"><img src="{{post.post_image}}" alt="{{post.title}}" class="img-fluid w-100" /></a>
+						<a href="{{post.url | relative_url}}.html"><img src="{{post.post_image | relative_url}}" alt="{{post.title}}" class="img-fluid w-100" /></a>
 					</div>
 					{% endif %}
-					<h4 class="mt-4 mb-2"><a href="{{post.url}}">{{post.title}}</a></h4>
+					<h4 class="mt-4 mb-2"><a href="{{post.url | relative_url}}.html">{{post.title}}</a></h4>
 					<div class="post-meta text-uppercase mb-3">
 						{% if post.author %}
 						<a href="#" class="text-color">by {{post.author}} </a>
