@@ -1,7 +1,7 @@
 ######################### Hero Area ##############################
 hero_area:
   background_image : "/assets/images/bg/banner-2.png"
-  subtitle: "MY NAME IS Jessica Alba"
+  subtitle: "MY NAME IS Harsimran"
   title : "I am a creative <br>UI/UX Designer <br>from London."
   content : "Dolor sit amet consectetur elit sed do eiusmod tempor incididunt labore et dolore magna."
   image : "/assets/images/banner/banner-img-2.png"
