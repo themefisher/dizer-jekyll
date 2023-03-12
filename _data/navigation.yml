@@ -2,9 +2,7 @@
 main:
   - name: Home
     url: /
-    submenu:
-      - name: Home
-        url: /index.html
+  
      
   - name: About
     url: "#"
