@@ -5,12 +5,7 @@ main:
     submenu:
       - name: Home
         url: /index.html
-      - name: Home 2
-        url: /index-2.html
-      - name: Home 3
-        url: /index-3.html
-      - name: Home 4
-        url: /index-4.html
+     
   - name: About
     url: "#"
     submenu:
